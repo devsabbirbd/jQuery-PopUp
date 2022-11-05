@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
+</head>
+<body>
+
+    <div class="main-container">
+        <div class="popup">
+            <button class="open">Popup 1</button>
+            <div class="pop-content" position="top">
+                    <button class="close">Close</button>
+                   <p>Popup1</p>
+            </div>
+        </div>
+        <div class="popup">
+            <button class="open">Popup 2</button>
+            <div class="pop-content" position="bottom">
+                    <button class="close">Close</button>
+                   <p>Popup2</p>
+            </div>
+        </div>
+        <div class="popup">
+            <button class="open">Popup 3</button>
+            <div class="pop-content" position="left">
+                    <button class="close">Close</button>
+                   <p>Popup3
+                   </p>
+            </div>
+        </div>
+        <div class="popup">
+            <button class="open">Popup 4</button>
+            <div class="pop-content" position="right">
+                    <button class="close">Close</button>
+                   <p>Popup4</p>
+            </div>
+        </div>
+        <div class="popup">
+            <button class="open">Popup 5</button>
+            <div class="pop-content" position="center">
+                    <button class="close">Close</button>
+                   <p>Popup5</p>
+            </div>
+        </div>
+
+
+    </div>
+
+<script>
+    
+    $('button.open').click(function(){
+     $(this).parent().addClass('activepop');
+     $(this).siblings('.pop-content').children('.close').click(function(){
+        $(this).parent().parent().removeClass('activepop');
+     })
+    });    
+
+</script>
+</body>
+</html>
